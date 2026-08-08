@@ -29,6 +29,7 @@ class HomePage extends StatelessWidget {
               ),
               Text('READ'),
               Text('LOOK'),
+
               Text('WATCH'),
             ],
           ),
@@ -61,13 +62,15 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: .center,
             spacing: 8,
             children: [
-              Image.network(
-                'https://thumbs.dreamstime.com/b/la-estatua-de-abraham-lincoln-sentado-en-una-silla-el-monumento-al-centro-comercial-nacional-washington-dc-usa-sentada-estados-302951708.jpg',
-                width: 130,
-                height: 100,
-                fit: BoxFit.cover,
-                alignment: AlignmentGeometry.center,
-              ),
+              // Image.network(
+              //   'https://thumbs.dreamstime.com/b/la-estatua-de-abraham-lincoln-sentado-en-una-silla-el-monumento-al-centro-comercial-nacional-washington-dc-usa-sentada-estados-302951708.jpg',
+              //   width: 130,
+              //   height: 100,
+              //   fit: BoxFit.cover,
+              //   alignment: AlignmentGeometry.center,
+              // ),
+              Image.asset("assets/images/peru.png", width: 200),
+
               SizedBox(width: 8),
               Column(
                 crossAxisAlignment: .start,
@@ -87,6 +90,28 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ],
+          ),
+
+          Container(
+            width: 200,
+            height: 200,
+            padding: EdgeInsets.all(20),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: SweepGradient(
+                colors: [
+                  Colors.blue,
+                  Colors.yellow,
+                  Colors.pink,
+                  Colors.green,
+                  Colors.red,
+                  Colors.blue,
+                  Colors.black,
+                ],
+              ),
+            ),
+            child: Text("Hola Flutter"),
           ),
         ],
       ),
